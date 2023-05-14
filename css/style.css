@@ -140,9 +140,21 @@ body {
     color: var(--bg);
     cursor: pointer;
     outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
 .btn-primary:hover {
     background: var(--gradient-hover);
+}
+.btn-primary img {
+    transform: translateX(70px);
+    transition: all .5s;
+}
+.btn-primary:hover img {
+    transform: translateX(0px);
+    transition: all .5s;
 }
 
 /******Почему нас выбирают*****/
@@ -190,4 +202,129 @@ body {
     font-size: 16px;
     line-height: 140%;
     margin-top: 24px;
+}
+
+/**************Карточки бургеров*******************/
+.change {
+    background-image: url("/img/burgers_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 180px;
+}
+.burger-cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 60px;
+}
+.burger-card {
+    width: 384px;
+    padding: 30px;
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+}
+.burger-card-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 24px 0;
+}
+
+.burger-card-description {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+}
+.burger-card-extra {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.burger-other {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.burger-price {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+}
+.burger-weight {
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: #757575;
+}
+
+/*****************Заказ********************/
+
+.order {
+    background-image: url('/img/order_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+.order .container {
+    position: relative;
+}
+.order-form {
+    display: flex;
+    flex-direction: column;
+    width: 424px;
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+    padding: 60px 40px;
+    margin-left: 674px;
+    margin-top: 60px;
+}
+.order-wrapper {
+    display: flex;
+    align-items: center;
+}
+.order-wrapper img {
+    position: absolute;
+    top: 0px;
+    right: calc(100% - 764px);
+    z-index: -1;
+}
+.order-form-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+input {
+    border-image-source: var(--gradient);
+    border-width: 1px;
+    border-image-slice: 1;
+    background: transparent;
+    padding: 16px 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #757575;
+    border-radius: 8px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
 }
