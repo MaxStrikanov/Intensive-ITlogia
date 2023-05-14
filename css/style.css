@@ -3,6 +3,7 @@
     --bg: #191411;
     --primary: #D3320F;
     --gradient: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+    --gradient-hover: linear-gradient(95.61deg, #a76262 0%, #e26738 100%);
     --white: #fff;
 }
 
@@ -77,7 +78,8 @@ body {
 .main {
     display: flex;
     align-items: center;
-padding-top: 103px;
+    padding-top: 103px;
+    position: relative;
     
 }
 .new-nemu {
@@ -107,8 +109,8 @@ padding-top: 103px;
 
 .main-img {
     position: absolute;
-    top: 64px;
-    right: 39px;
+    top: -36px;
+    left: calc(100% - 61em);
 }
 
 .btn-primary {
@@ -121,4 +123,8 @@ padding-top: 103px;
     line-height: 22px;
     color: var(--bg);
     cursor: pointer;
+    outline: none;
+}
+.btn-primary:hover {
+    background: var(--gradient-hover);
 }
