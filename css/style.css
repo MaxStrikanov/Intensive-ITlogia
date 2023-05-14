@@ -28,6 +28,7 @@ body {
     color: var(--white);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .3s all;
 }
 
 .container {
@@ -65,6 +66,10 @@ body {
     text-decoration: none;
     margin-right: 88px;
 }
+.menu-item a:hover {
+    color: var(--primary);
+    
+}
 
 .currency {
     border: 1px solid var(--white);
@@ -74,7 +79,18 @@ body {
     height: 45px;
     cursor: pointer;
 }
+.currency:hover {
+    border: 1px solid var(--primary);
+    transition: .3s all;
+}
 
+.currency  svg path {
+    fill: var(--white);
+}
+.currency:hover svg path {
+    fill: var(--primary);
+    transition: .3s all;
+}
 .main {
     display: flex;
     align-items: center;
@@ -127,4 +143,51 @@ body {
 }
 .btn-primary:hover {
     background: var(--gradient-hover);
+}
+
+/******Почему нас выбирают*****/
+.why {
+    background-image: url('/img/bg-2.png');
+    height: 608px;
+    max-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.title {
+    font-family: 'Merriweather', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.why-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.why-item {
+    max-width: 312px;
+    text-align: center;
+}
+.why-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 24px;
+}
+.why-item-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.why-item-description {
+    font-family: 'Gilroy', sans-serif;;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 24px;
 }
