@@ -65,6 +65,7 @@ body {
     color: var(--white);
     text-decoration: none;
     margin-right: 88px;
+    cursor: pointer;
 }
 .menu-item a:hover {
     color: var(--primary);
