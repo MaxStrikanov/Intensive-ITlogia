@@ -2,7 +2,8 @@ const currencyBtn = document.querySelector('.currency');
 let burgerPrice = document.querySelectorAll('.burger-price');
 
 const  currency = () => {
-	currencyBtn.onclick = (e) => {
+	document.addEventListener('DOMContentLoaded', () => {
+		currencyBtn.onclick = (e) => {
 		let currentCurrency = e.target.innerText;
 
 		let newCurrency = '$';
@@ -16,10 +17,10 @@ const  currency = () => {
 			coeficient = 3;
 		} else if (currentCurrency === 'BYN') {
 			newCurrency = '€';
-			coefficient = 0.9;
+			coeficient = 0.9;
 		} else if (currentCurrency === '€') {
 			newCurrency = '¥';
-			coefficient = 6.9;
+			coeficient = 6.9;
 		}
 
 		e.target.innerText = newCurrency;
@@ -28,6 +29,7 @@ const  currency = () => {
 			burgerPrice[i].innerText = `${+(burgerPrice[i].getAttribute('data-base-price') * coeficient).toFixed(1) +  newCurrency}`;
 		}
 	}
+	})
 }
 
 export default currency;
